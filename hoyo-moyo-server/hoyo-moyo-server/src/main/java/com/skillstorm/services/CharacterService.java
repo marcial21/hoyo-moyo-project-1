@@ -1,5 +1,7 @@
 package com.skillstorm.services;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
 import com.skillstorm.models.Character;
@@ -7,13 +9,17 @@ import com.skillstorm.repositories.CharacterRepository;
 
 @Service
 public class CharacterService {
-    private CharacterRepository characterRepository;
+    private CharacterRepository repository;
 
     public CharacterService(CharacterRepository characterRepository) {
-        this.characterRepository = characterRepository;
+        this.repository = characterRepository;
     }
 
     public Iterable<Character> findAll() {
-        return characterRepository.findAll(); 
+        return repository.findAll(); 
+    }
+
+    public Optional<Character> findById(int id) {
+        return repository.findById(id);
     }
 }
