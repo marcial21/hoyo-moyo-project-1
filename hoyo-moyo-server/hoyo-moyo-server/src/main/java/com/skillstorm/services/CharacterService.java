@@ -1,5 +1,6 @@
 package com.skillstorm.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -21,5 +22,9 @@ public class CharacterService {
 
     public Optional<Character> findById(int id) {
         return repository.findById(id);
+    }
+
+    public List<Character> findByWarehouseId(int id) {
+        return repository.findByWarehouseId(id);
     }
 }

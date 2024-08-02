@@ -1,0 +1,41 @@
+.lbutton-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the space between buttons */
+}
+
+.warehouse-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Bootstrap primary color or your choice */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.warehouse-button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+.characters-list {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.characters-list ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.characters-list li {
+    padding: 5px 0;
+}
+
+.error-message {
+    color: red;
+    margin-top: 20px;
+}

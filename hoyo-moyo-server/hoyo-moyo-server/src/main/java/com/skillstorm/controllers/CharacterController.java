@@ -1,5 +1,6 @@
 package com.skillstorm.controllers;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +20,11 @@ import com.skillstorm.services.CharacterService;
 @CrossOrigin(origins = "http://localhost:5173")
 public class CharacterController {
 
-    @Autowired
     private CharacterService service; 
+
+    public CharacterController(CharacterService characterService) {
+        this.service = characterService;
+    }
 
     @GetMapping
     public Iterable<Character> findAll() {
@@ -35,6 +39,15 @@ public class CharacterController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND); 
         }
+    }
+
+    @GetMapping("/warehouseId/{warehouseId}")
+    public ResponseEntity<List<Character>> findByWarehouseId(@PathVariable int warehouseId) {
+        List<Character> characters = service.findByWarehouseId(warehouseId);
+        if (characters.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(characters, HttpStatus.OK);
     }
 
     //TODO: Add new character

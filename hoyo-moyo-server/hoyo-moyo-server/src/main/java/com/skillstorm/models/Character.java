@@ -17,11 +17,25 @@ public class Character {
     private int level;
     private String description;
     private String element;
-    //private Weapon equippedWeapon;
+    private int weapon_id;
     private int hp;
     private int atk;
     private int def;
+    private int warehouseId;
 
+    public int getWarehouseId() {
+        return warehouseId;
+    }
+    public void setWarehouseId(int warehouse_id) {
+        this.warehouseId = warehouse_id;
+    }
+    public int getWeapon_id() {
+        return weapon_id;
+    }
+    public void setEquippedWeapon(int equippedWeapon) {
+        this.weapon_id = equippedWeapon;
+    }
+    
     public int getCharacterId() {
         return characterId;
     }
@@ -70,14 +84,14 @@ public class Character {
     public void setDef(int characterDef) {
         this.def = characterDef;
     }
-
     @Override
     public String toString() {
-        return "Character [characterId=" + characterId + ", characterName=" + name + ", characterLevel="
-                + level + ", characterDescription=" + description + ", characterElement="
-                + element + ", characterHp=" + hp + ", characterAtk=" + atk
-                + ", characterDef=" + def + "]";
+        return "Character [characterId=" + characterId + ", name=" + name + ", level=" + level + ", description="
+                + description + ", element=" + element + ", equippedWeapon=" + weapon_id + ", hp=" + hp + ", atk="
+                + atk + ", def=" + def + ", warehouse=" + warehouseId + "]";
     }
+
+  
 
     
 }
