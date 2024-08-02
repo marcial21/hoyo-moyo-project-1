@@ -11,41 +11,34 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.skillstorm.models.Artifact;
-import com.skillstorm.services.ArtifactService;
+import com.skillstorm.models.Warehouse;
+import com.skillstorm.services.WarehouseService;
 
 @RestController
-@RequestMapping("/artifacts")
+@RequestMapping("/warehouses")
 @CrossOrigin(origins = "http://localhost:5173")
-public class ArtifactController {
+public class WarehouseController {
+
     @Autowired
-    private ArtifactService service;
+    private WarehouseService service;
 
     @GetMapping
-    public Iterable<Artifact> findAll() {
+    public Iterable<Warehouse> findAll() {
         return service.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Artifact> findById(@PathVariable int id) {
-        Optional<Artifact> artifact = service.findById(id);
-        if (artifact.isPresent()) {
-            return ResponseEntity.ok(artifact.get());
+    public ResponseEntity<Warehouse> findById(@PathVariable int id) {
+        Optional<Warehouse> warehouse = service.findById(id);
+        if (warehouse.isPresent()) {
+            return ResponseEntity.ok(warehouse.get());
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND); 
         }
     }
 
-    /*
-     * TODO: Add a new artifact (post)
-     *      - allow duplicates
-     *      - check max capacity
-     * 
-     * TODO: level up artifact (put)
-     *      - check that its not max level
-     * 
-     * TODO: delete artifact (Del)
-     *      - check that it exists
-     *      - check that its not equipped
-     */
+    //TODO: create new warehouse
+    //TODO: Update warehouse
+    //TODO: delete warehouse
+
 }

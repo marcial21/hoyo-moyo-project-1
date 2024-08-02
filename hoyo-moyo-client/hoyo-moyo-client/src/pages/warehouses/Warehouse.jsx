@@ -1,24 +1,40 @@
 import Header from '../../components/Header'
-import List from '../../components/List'
 import ModificationOptions from '../../components/ModificationOptions'
+import { useEffect, useState } from 'react';
 import './Warehouse.css'
-
+import { fetchWarehouses } from '../../api/WarehouseService'
+import ListWarehouses from '../../components/lists/ListWarehouses';
 
 export const Warehouse = () => {
 
-    const warehouseItems = [
-      'Warehouse 1',
-      'Warehouse 2',
-      'Warehouse 3',
-      // Add more items as needed
-    ];
+    const [warehouses, setWarehouses] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+      const getData = async () => {
+        try {
+          const warehousesData = await fetchWarehouses();
+          setWarehouses(warehousesData);
+        } catch (error) {
+          setError(error);
+        } finally {
+          setLoading(false);
+        }
+      };
+  
+      getData();
+    }, []);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
 
     return (
     <div className="warehouse">
       <Header />
       <ModificationOptions />
       <main>
-        <List items={warehouseItems} /> {/* Always show the list */}
+        <ListWarehouses items={warehouses} /> {/* Always show the list */}
       </main>
     </div>
     
