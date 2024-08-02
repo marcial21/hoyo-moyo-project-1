@@ -3,6 +3,12 @@ import AddWarehouseForm from './forms/AddWarehouseForm';
 import './ModificationOptions.css'
 import { useState } from 'react'
 
+/**
+ * Component used for adding functionality to the Add, Delete and Update buttons. 
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 const ModifcationOptions = ( { items }) => {
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [warehouses, setWarehouses] = useState([]);
@@ -15,8 +21,8 @@ const ModifcationOptions = ( { items }) => {
   const handleFormSubmitAdd = async (name) => {
     try {
       const newWarehouse = await addWarehouse(name);
-      setIsFormVisible(false); // Hide the form after submission
-      setError(null); // Clear any previous error
+      setIsFormVisible(false); 
+      setError(null);
     } catch (error) {
       setError('Error adding warehouse');
     }
@@ -25,8 +31,8 @@ const ModifcationOptions = ( { items }) => {
   const handleFormSubmitDelete = async (name) => {
     try {
       const newWarehouse = await deleteWarehouse(name);
-      setIsFormVisible(false); // Hide the form after submission
-      setError(null); // Clear any previous error
+      setIsFormVisible(false); 
+      setError(null); 
     } catch (error) {
       setError('Error deleting warehouse');
     }
@@ -35,21 +41,21 @@ const ModifcationOptions = ( { items }) => {
   const handleFormSubmitUpdate = async (name) => {
     try {
       const newWarehouse = await updateWarehouse(name);
-      setIsFormVisible(false); // Hide the form after submission
-      setError(null); // Clear any previous error
+      setIsFormVisible(false); 
+      setError(null);
     } catch (error) {
       setError('Error updating warehouse');
     }
   };
 
   const handleFormCancelAdd = () => {
-    setIsFormVisible(false); // Hide the form without adding a name
+    setIsFormVisible(false); 
   };
   const handleFormCancelDelete = () => {
-    setIsFormVisible(false); // Hide the form without adding a name
+    setIsFormVisible(false); 
   };
   const handleFormCancelUpdate = () => {
-    setIsFormVisible(false); // Hide the form without adding a name
+    setIsFormVisible(false); 
   };
 
   const handleUpdateClick = () => {

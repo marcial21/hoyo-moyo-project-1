@@ -1,3 +1,8 @@
+
+/**
+ * 
+ * @returns API requests to our backend.
+ */
 export const fetchCharacters = async () => {
     try {
       const response = await fetch('http://localhost:8080/characters');

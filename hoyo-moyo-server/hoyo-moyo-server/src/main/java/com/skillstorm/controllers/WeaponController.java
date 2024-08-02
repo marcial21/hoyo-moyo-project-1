@@ -36,16 +36,4 @@ public class WeaponController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND); 
         }
     }
-
-    /*
-     * TODO: Add new weapon
-     *      -allow duplicates
-     *      -check max capacity
-     * 
-     * TODO: Level up weapon
-     *      - check for max level
-     * 
-     * TODO: delete weapon
-     *      - check that its not equipped to character
-     */
 }

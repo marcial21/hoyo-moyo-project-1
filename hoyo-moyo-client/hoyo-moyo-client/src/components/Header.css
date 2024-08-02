@@ -1,41 +1,40 @@
-/* src/components/Header.css */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     position: fixed;
-    width: calc(100% - 40px); /* Ensure the header does not exceed the screen width */
+    width: calc(100% - 40px); 
     top: 0;
     left: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    box-sizing: border-box; 
 
   }
   
   
   .logo {
-    height: 60px; /* Increase the height of the logo */
-    width: auto; /* Maintain the aspect ratio */
+    height: 60px; 
+    width: auto; 
   }
 
   .button-group {
-    display: flex; /* Align buttons in a row */
-    align-items: center; /* Center buttons vertically */
+    display: flex; 
+    align-items: center; 
   }
   
   .inventory-button {
     padding: 10px 20px;
-    background-color: #28a745; /* Green background color */
-    color: #ffffff; /* Light text color */
+    background-color: #28a745; 
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px; /* Space between Inventory and Warehouses buttons */
+    margin-right: 10px; 
   }
   
   .inventory-button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838; 
   }
   
   .warehouses-button {

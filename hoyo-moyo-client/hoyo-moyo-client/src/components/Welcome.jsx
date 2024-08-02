@@ -1,6 +1,10 @@
-// src/components/Main.jsx
-import './Welcome.css'; // For styling
+import './Welcome.css'; 
 
+/**
+ * Component for displaying the welcome messaage of our application. 
+ * 
+ * @returns 
+ */
 const Welcome = () => {
   return (
     <main className="welcome-content">

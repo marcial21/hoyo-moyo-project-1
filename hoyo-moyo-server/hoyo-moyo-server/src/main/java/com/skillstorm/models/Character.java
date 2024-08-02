@@ -90,8 +90,4 @@ public class Character {
                 + description + ", element=" + element + ", equippedWeapon=" + weapon_id + ", hp=" + hp + ", atk="
                 + atk + ", def=" + def + ", warehouse=" + warehouseId + "]";
     }
-
-  
-
-    
 }

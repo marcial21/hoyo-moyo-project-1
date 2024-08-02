@@ -7,7 +7,6 @@ const WeaponItems = [
   'The Stringless',
   'Skyward Harp',
   'Staff of Homa',
-  // Add more items as needed
 ];
 export const WeaponInventory = () => {
     return (
@@ -15,7 +14,7 @@ export const WeaponInventory = () => {
       <Header />
       <InventoryOptions />
       <main>
-        <List items={WeaponItems} /> {/* Always show the list */}
+        <List items={WeaponItems} /> {}
       </main>
     </div>
     )

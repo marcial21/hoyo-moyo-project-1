@@ -8,7 +8,6 @@ const characterItems = [
   'Venti',
   'Zhongli',
   'Raiden Shogun',
-  // Add more items as needed
 ];
 
 export const CharacterInventory = () => {
@@ -17,7 +16,7 @@ export const CharacterInventory = () => {
       <Header />
       <InventoryOptions />
       <main>
-        <List items={characterItems} /> {/* Always show the list */}
+        <List items={characterItems} /> {}
       </main>
     </div>
     )

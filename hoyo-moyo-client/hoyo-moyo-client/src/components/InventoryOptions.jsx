@@ -1,7 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import './InventoryOptions.css'
 
-
+/**
+ * Component used for showing our different inventories. 
+ * 
+ * @returns 
+ */
 const InventoryOptions = () => {
   const navigate = useNavigate();
 

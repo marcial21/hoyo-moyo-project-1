@@ -1,5 +1,11 @@
 import { useState } from 'react';
 
+/**
+ * Component used for filling forms.
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 const AddWarehouseForm = ({ onSubmit, onCancel }) => {
   const [name, setName] = useState('');
 
@@ -10,7 +16,7 @@ const AddWarehouseForm = ({ onSubmit, onCancel }) => {
   const handleAddClick = (event) => {
     event.preventDefault();
     onSubmit(name);
-    setName(''); // Clear the form
+    setName(''); 
   };
 
   return (

@@ -61,8 +61,4 @@ public class WarehouseController {
     public void updateWarehouseById(@PathVariable int id, @PathVariable String name, @RequestBody Warehouse entity) {
         service.updateWarehouseById(id, name, entity);
     }
-
-    //TODO: Update warehouse
-    //TODO: delete warehouse
-
 }

@@ -48,15 +48,4 @@ public class CharacterController {
         }
         return new ResponseEntity<>(characters, HttpStatus.OK);
     }
-
-    //TODO: Add new character
-    //TODO: equip weapon
-        //Make sure that the weapon exists, and no one else has it. 
-    //TODO: Unequip weapon
-    //TODO: Equip artifacts
-        // check for existence and if no one else has it. 
-    //TODO: Unequip artifacts
-
-    //TODO: Level up character
-        // check for maximum level reached.
 }

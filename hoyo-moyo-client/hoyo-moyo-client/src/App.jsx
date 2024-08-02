@@ -7,6 +7,10 @@ import { CharacterInventory } from './pages/CharacterInventory/CharacterInventor
 import { WeaponInventory } from './pages/WeaponInventory/WeaponInventory';
 import { ArtifactInventory } from './pages/ArtifactInventory/ArtifactInventory';
 
+/**
+ * 
+ * @returns Routing for the application. 
+ */
 const App = () => {
   return (
     <BrowserRouter>

@@ -1,20 +1,26 @@
 import { fetchCharactersByWarehouse } from '../../api/CharacterService';
-import './ListWarehouses.css'; // Import CSS for styling buttons
+import './ListWarehouses.css'; 
 import { useState } from 'react';
 
+/**
+ * Component used to iterate through the list of available warehouses with some features. 
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 const ListWarehouses = ({ items }) => {
   if (!Array.isArray(items)) {
     return <p>No items to display</p>;
   }
 
-  const [characters, setCharacters] = useState([]); // State to store characters
+  const [characters, setCharacters] = useState([]); 
   const [error, setError] = useState(null);
 
   const handleButtonClick = async (warehouseId) => {
     try {
       const data = await fetchCharactersByWarehouse(warehouseId);
       if (Array.isArray(data)) {
-        setCharacters(data); // Update state with the fetched characters
+        setCharacters(data); 
       } else {
         setError('No characters found for the warehouse.');
       }

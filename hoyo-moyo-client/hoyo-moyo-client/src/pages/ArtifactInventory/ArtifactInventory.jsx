@@ -8,7 +8,6 @@ const ArtifactItems = [
   'Artifact 1',
   'Artifact 2',
   'Artifact 3',
-  // Add more items as needed
 ];
 
 export const ArtifactInventory = () => {
@@ -17,7 +16,7 @@ export const ArtifactInventory = () => {
       <Header />
       <InventoryOptions />
       <main>
-        <List items={ArtifactItems} /> {/* Always show the list */}
+        <List items={ArtifactItems} /> {}
       </main>
     </div>
     )

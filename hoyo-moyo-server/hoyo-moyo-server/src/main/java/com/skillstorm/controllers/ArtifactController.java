@@ -35,17 +35,4 @@ public class ArtifactController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND); 
         }
     }
-
-    /*
-     * TODO: Add a new artifact (post)
-     *      - allow duplicates
-     *      - check max capacity
-     * 
-     * TODO: level up artifact (put)
-     *      - check that its not max level
-     * 
-     * TODO: delete artifact (Del)
-     *      - check that it exists
-     *      - check that its not equipped
-     */
 }

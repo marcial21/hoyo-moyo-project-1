@@ -1,5 +1,11 @@
 import './List.css'
 
+/**
+ * Component used for creating a list of items. 
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 const List = ({ items }) => {
     return (
       <ul className="list">

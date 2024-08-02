@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+/**
+ * 
+ * @returns Functions for fetching API requests. 
+ */
 export const fetchWarehouses = async () => {
     try {
       const response = await fetch('http://localhost:8080/warehouses');
@@ -29,7 +33,7 @@ export const fetchWarehouses = async () => {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      return data; // Assuming data is the newly added warehouse
+      return data; 
     } catch (error) {
       console.error('Error adding warehouse:', error);
       return null;

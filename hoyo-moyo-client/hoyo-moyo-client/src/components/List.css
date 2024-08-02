@@ -1,26 +1,25 @@
-/* src/components/List.css */
 .list {
-    padding: 70px 600px 100px; /* Added top padding to account for the fixed header */
-    text-align: center; /* Center text horizontally */
-    max-width: 400px; /* Set a maximum width for the content */
-    margin: 0 auto; /* Center the content horizontally */
-    list-style: none; /* Remove default list styling */
-    background-color: #1b1c1d; /* Light background color */
-    border: 1px solid #dee2e6; /* Border around the list */
-    border-radius: 5px; /* Rounded corners */
+    padding: 70px 600px 100px; 
+    text-align: center; 
+    max-width: 400px;
+    margin: 0 auto; 
+    list-style: none; 
+    background-color: #1b1c1d; 
+    border: 1px solid #dee2e6; 
+    border-radius: 5px; 
   }
   
   .list-item {
-    padding: 10px; /* Add padding to each item */
-    border-bottom: 1px solid #dee2e6; /* Add border between items */
-    cursor: pointer; /* Change cursor to pointer */
+    padding: 10px; 
+    border-bottom: 1px solid #dee2e6; 
+    cursor: pointer; 
   }
   
   .list-item:hover {
-    background-color: #63676b; /* Change background on hover */
+    background-color: #63676b; 
   }
   
   .list-item:last-child {
-    border-bottom: none; /* Remove bottom border from the last item */
+    border-bottom: none; 
   }
   

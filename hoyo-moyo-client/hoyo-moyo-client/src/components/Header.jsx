@@ -1,8 +1,12 @@
 import logo from "../assets/logo.png"
 import { useNavigate } from 'react-router-dom'
-import './Header.css'; // For styling
+import './Header.css'; 
 
-
+/**
+ * Component for displaying the header of the application.
+ * 
+ * @returns 
+ */
 const Header = () => {
   
   const navigate = useNavigate();

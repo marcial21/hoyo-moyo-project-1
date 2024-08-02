@@ -34,7 +34,7 @@ export const Warehouse = () => {
       <Header />
       <ModificationOptions items = {warehouses}/>
       <main>
-        <ListWarehouses items={warehouses} /> {/* Always show the list */}
+        <ListWarehouses items={warehouses} /> {}
       </main>
     </div>
     
