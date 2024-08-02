@@ -10,13 +10,23 @@ const handleWarehouseClick = () => {
     alert('Warehouse clicked!');
 }
 
+const handleInventoryClick = () => {
+  alert('Inventory Clicked')
+}
+
 const Header = () => {
   return (
     <header className="header">
         <button className='logo-button' onClick={handleLogoClick}>
             <img src={logo} alt="Logo" className="logo" />
         </button>
-      <button className="warehouses-button" onClick={handleWarehouseClick}>Warehouses</button>
+
+      <div className="button-group">
+        <button className="inventory-button" onClick={handleInventoryClick}>Inventory</button>
+        <button className="warehouses-button" onClick={handleWarehouseClick}>
+          Warehouses
+        </button>
+      </div>
     </header>
   );
 };

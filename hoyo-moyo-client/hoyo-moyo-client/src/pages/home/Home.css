@@ -1,0 +1,12 @@
+/* src/Home.css */
+.Home {
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    min-height: 100vh; /* Ensure the container takes up the full viewport height */
+    margin: 0; /* Ensure there's no default margin affecting layout */
+    padding: 0; /* Ensure there's no default padding affecting layout */
+  }

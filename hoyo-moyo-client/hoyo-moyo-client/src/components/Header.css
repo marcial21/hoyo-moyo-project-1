@@ -13,9 +13,29 @@
 
   }
   
+  
   .logo {
     height: 60px; /* Increase the height of the logo */
     width: auto; /* Maintain the aspect ratio */
+  }
+
+  .button-group {
+    display: flex; /* Align buttons in a row */
+    align-items: center; /* Center buttons vertically */
+  }
+  
+  .inventory-button {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background color */
+    color: #ffffff; /* Light text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Space between Inventory and Warehouses buttons */
+  }
+  
+  .inventory-button:hover {
+    background-color: #218838; /* Darker green on hover */
   }
   
   .warehouses-button {

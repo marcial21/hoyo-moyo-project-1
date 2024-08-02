@@ -1,52 +1,26 @@
-
-import Header from './components/Header'
-import Welcome from './components/Welcome'
 import './App.css'
+import { BrowserRouter, Routes, Route, Link, Navigate } from 'react-router-dom'
+import { Home } from './pages/home/Home'
+import { Error } from './pages/error/Error'
+import { Warehouse } from './pages/warehouses/Warehouse';
+import { CharacterInventory } from './pages/CharacterInventory/CharacterInventory';
+import { WeaponInventory } from './pages/WeaponInventory/WeaponInventory';
+import { ArtifactInventory } from './pages/ArtifactInventory/ArtifactInventory';
 
 const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <Welcome />
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/warehouses" element={<Warehouse />} />
+      <Route path="/inventory/characterInventory" element={<CharacterInventory />} />
+      <Route path="/inventory/weaponInventory" element={<WeaponInventory />} />
+      <Route path="/inventory/artifactInventory" element={<ArtifactInventory />} />
+      <Route path='*' element={<Error/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 };
 
 export default App;
 
-
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vitejs.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App

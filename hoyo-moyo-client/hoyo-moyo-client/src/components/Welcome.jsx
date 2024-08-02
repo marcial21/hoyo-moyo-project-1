@@ -8,7 +8,6 @@ const Welcome = () => {
       <p>
         This application allows authorized administrators to modify the warehouses of HOYOMOYO corporation. 
         Below are a few keynote features of using the application. 
-        * Delete items from the warehouses
       </p>
     </main>
   );

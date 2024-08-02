@@ -1,8 +1,13 @@
 /* src/components/Welcome.css */
-.main-content {
+.welcome-content {
     padding: 70px 20px 20px; /* Added top padding to account for the fixed header */
     text-align: center; /* Center text horizontally */
-    max-width: 800px; /* Set a maximum width for the content */
+    max-width: 400px; /* Set a maximum width for the content */
     margin: 0 auto; /* Center the content horizontally */
   }
+
+p {
+    max-width: 500px;
+    margin: 0 auto;
+}
   
