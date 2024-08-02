@@ -32,7 +32,7 @@ export const Warehouse = () => {
     return (
     <div className="warehouse">
       <Header />
-      <ModificationOptions />
+      <ModificationOptions items = {warehouses}/>
       <main>
         <ListWarehouses items={warehouses} /> {/* Always show the list */}
       </main>

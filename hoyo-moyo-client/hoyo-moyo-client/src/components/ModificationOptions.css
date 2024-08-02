@@ -15,3 +15,30 @@
     margin-left: 100px; /* Space between buttons */
     font-size: 23px;
 }
+
+.add-form {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .add-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .add-form input {
+    padding: 5px;
+    margin-top: 5px;
+    width: 100%;
+  }
+  
+  .add-form button {
+    margin-right: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 20px;
+  }
