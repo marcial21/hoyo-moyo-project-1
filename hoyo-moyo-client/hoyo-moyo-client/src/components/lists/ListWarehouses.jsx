@@ -33,6 +33,7 @@ const ListWarehouses = ({ items }) => {
               <li key={character.id}>
                 {character.name} level:{character.level} <br/> {character.description} 
                 <br/>Element: {character.element} <br/> HP: {character.hp} <br/> ATK: {character.atk} <br/> DEF: {character.def}
+                <br/> Serial: {character.characterId}
               </li>
             ))}
           </ul>
